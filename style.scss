@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+header {
+    background-image: url(/images/campamento.svg);
+    width: 100%;
+    height: 600px;
+    background-position:initial;
+    background-size: cover;
+    nav {
+        display: flex;
+        justify-content: space-between;
+        .boton {
+            display:flex;
+            margin-top: 25px;
+            margin-left: 25px;
+            cursor: pointer;
+            color: white;
+            background: none;
+            border:none;
+            font-size: 30px;
+            line-height: 60px;
+        }
+        .menuburguer {
+            display:none;
+            margin-right: 20px;
+            line-height: 80px;
+            .titulosmenu {
+                &:hover {
+                    color: white;
+                    font-weight: bolder;
+                }
+                a {
+                    font-family: 'Montserrat', sans-serif;
+                    color:white;
+                    margin-left: 25px;
+                }
+            }
+        }
+        #burguer {
+            display:none;
+        }
+        
+        #burguer:checked + .menuburguer {
+            position: absolute;
+            top:80px;
+            background: rgb(49, 49, 107);
+            opacity: 50%;
+            width:100%;
+            display:flex;
+            justify-content: center;
+            align-content: center;
+            flex-direction: column;
+            z-index: 1;
+        }
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            font-size: 40px;
+            color:white;
+            margin-top: 15px;
+        }
+        .redes{
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            margin: 35px;
+            height: 25px;
+            text-decoration: none;
+         }
+    }
+}
+
+section {
+    background-color:beige;
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    background-color:yellow;
+    width: 100%;
+    height: 100%;
+}
