@@ -49,11 +49,19 @@ function reservas() {
                 alert("Error");
                 break;
             }
-            reserva2 = prompt("Desea hacer otra reserva?")
+            reservas2()
+            break;
         }
     }
+
+function reservas2() {
+    let reserva2 = prompt("Desea hacer otra reserva?")
+    if ((reserva2 == "SI") || (reserva2 == "si")) {
+        reservas()
+    }else { alert("Gracias, tu reserva ha sido guardada")}
+}
 
 let pregunta = prompt("Desea hacer una reserva");
 if ((pregunta == "SI") || (pregunta == "si")) {
     reservas()
-}
+}else { alert("En otro momento los esperamos!")}
