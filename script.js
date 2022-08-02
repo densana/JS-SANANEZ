@@ -10,6 +10,7 @@ function datos() {
 datos()
 
 /*reserva*/
+
 function reservas() {
     let reserva = prompt("Selecciona para cuantas carpas queres reservar:")
     while (reserva != "ESC") {
@@ -54,12 +55,12 @@ function reservas() {
         }
     }
 
-function reservas2() {
-    let reserva2 = prompt("Desea hacer otra reserva?")
-    if ((reserva2 == "SI") || (reserva2 == "si")) {
-        reservas()
-    }else { alert("Gracias, tu reserva ha sido guardada")}
-}
+    function reservas2() {
+        let reserva2 = prompt("Desea hacer otra reserva?")
+        if ((reserva2 == "SI") || (reserva2 == "si")) {
+            reservas()
+        }else { alert("Gracias, tu reserva ha sido guardada")}
+    }
 
 let pregunta = prompt("Desea hacer una reserva");
 if ((pregunta == "SI") || (pregunta == "si")) {
