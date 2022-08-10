@@ -1,16 +1,32 @@
 /*reservas*/
-
-const formulario = document.getElementById('formularioReservas');
-const inputs = document.querySelectorAll('formularioReservas input');
-
-function validarFormulario(e){
-    e.preventDefault();
-    const nombre = document.getElementById('inputName');
-    const mail = document.getElementById('inputMail');
-    const contacto = document.getElementById('inputContacto');
+class User {
+    constructor(username, mail, number){
+        this.username = username
+        this.mail = mail
+        this.number = number
+    }
 }
 
-formulario.addEventListener('submit', validarFormulario() );
+const formulario = document.getElementById('formularioReservas');
+
+const users = []
+
+formulario.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const username = document.getElementById('InputName').value;
+    const mail = document.getElementById('InputMail').value;
+    const number = document.getElementById('InputNumber').value;
+    
+    console.log(username, mail, number)
+
+    const user = new User(username, mail, number)
+
+    users.push(user)
+
+    formulario.reset()
+    console.log(users)
+});
+
 
 /*servicios*/
 
@@ -22,13 +38,6 @@ class Menu {
         this.caracteristicas = caracteristicas
         this.precio = precio
     }
-    obtenerInfo(){
-        return `ID: ${this.id} | ${this.nombre} $${this.precio}`;
-    }
-    obtenerPrecio(){
-        return `${this.nombre} = $${this.precio}`; 
-    }
-
 }
 
 const menu1 = new Menu ("aca va img","1", "Menu Desayuno", "Cafe, Te o Mate con Tostadas y galletitas varias", "$500")
@@ -38,16 +47,39 @@ const menu4 = new Menu ("aca va img","4", "Menu Sandwich", "de choripan o veggie
 
 
 const menues = [menu1, menu2, menu3, menu4]
-console.log(menues)
 
-const servicios = document.querySelector('#cardServicios')
+const servicios = document.querySelector('#contenedorServicios')
 
 menues.forEach(arrayServicios => {
     servicios.innerHTML += `
-    <img src="${arrayServicios.img}" class="card-img-top" alt="menu-img">
-    <div class="card-body">
-      <h5 class="card-title">${arrayServicios.nombre}</h5>
-      <p class="card-text">${arrayServicios.caracteristicas}</p>
-      <a href="#" class="btn btn-primary">Agregar a carrito</a>
-    </div>`
+    <div class="col-sm-3">
+            <div class="card style="width: 18rem;">
+              <div class="card-body">
+                <img src="${arrayServicios.img}" alt="icon">
+                <h5 class="card-title">${arrayServicios.nombre}</h5>
+                <p class="card-text">${arrayServicios.caracteristicas}</p>
+                <button id="add" class="btn btn-primary">Agregar a carrito</button>
+              </div>
+            </div>
+          </div>
+    `
+
+    const boton = document.getElementById("add")
+
+    boton.addEventListener('click', () => {
+        /*agregarAlCarrito(arrayServicios.id)*/
+        console.log("cucu")
+    })
+
 });
+
+/*carrito*/
+
+const carrito = []
+
+const agregarAlCarrito = (menuId) => {
+    const item = menues.find((prod) => prod.id === menuId)
+    carrito.push(item);
+    console.log(carrito);
+}
+
