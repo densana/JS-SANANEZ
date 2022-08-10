@@ -76,9 +76,43 @@ header {
 }
 
 section {
-    background-color:beige;
     width: 100%;
     height: 100%;
+    padding: 5%;
+    #contenedorSection {
+        padding: 5%;
+        .col {
+            justify-content: center;
+        }
+        .card {
+            background-color: transparent;
+            border: none;
+            justify-content: center;
+            text-align: center;
+            width: 70%;
+            margin: 10%;
+            .card-body {
+                display: flex;
+                flex-direction: column;
+                justify-items: center;
+                align-items: center;
+
+            }
+            img {
+                width: 80px;
+                height: 80px;
+            }
+            .card-text {
+                font-size: 14px;
+            }
+            .btn {
+            background-color: transparent;
+            color:green;
+            border: none;
+            font-weight: bolder;
+        }
+      }
+    }
 }
 
 footer {

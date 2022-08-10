@@ -7,9 +7,14 @@ function datos() {
     }
 }
 
-datos()
-
 /*reserva*/
+
+function fechas() {
+    const fecha1 = {
+        checkin: parseInt(prompt("Ingrese la fecha de arribo")),
+        checkout: parseInt(prompt("Ingrese la fecha de egreso")),
+    }
+}
 
 function reservas() {
     let reserva = prompt("Selecciona para cuantas carpas queres reservar:")
@@ -64,5 +69,7 @@ function reservas() {
 
 let pregunta = prompt("Desea hacer una reserva");
 if ((pregunta == "SI") || (pregunta == "si")) {
+    datos()
+    fechas()
     reservas()
 }else { alert("En otro momento los esperamos!")}

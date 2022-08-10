@@ -6,7 +6,7 @@
 }
 
 header {
-  background-image: url(./images/campamento.svg);
+  background-image: url(/images/campamento.svg);
   width: 100%;
   height: 600px;
   background-position: initial;
@@ -73,9 +73,42 @@ header nav .redes {
 }
 
 section {
-  background-color: beige;
   width: 100%;
   height: 100%;
+  padding: 5%;
+}
+section #contenedorSection {
+  padding: 5%;
+}
+section #contenedorSection .col {
+  justify-content: center;
+}
+section #contenedorSection .card {
+  background-color: transparent;
+  border: none;
+  justify-content: center;
+  text-align: center;
+  width: 70%;
+  margin: 10%;
+}
+section #contenedorSection .card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+section #contenedorSection .card img {
+  width: 80px;
+  height: 80px;
+}
+section #contenedorSection .card .card-text {
+  font-size: 14px;
+}
+section #contenedorSection .card .btn {
+  background-color: transparent;
+  color: green;
+  border: none;
+  font-weight: bolder;
 }
 
 footer {

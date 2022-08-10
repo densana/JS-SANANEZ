@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REFU</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
@@ -32,16 +34,72 @@
             </ul>
         </nav>
     </header>
-    <!--<section>
-        <h1 class="titulohome">Naturaleza</h1>
-        <div>EL REFUGIO</div>
-        <div>RESERVAS</div>
-        <div>SERVICIOS</div>
+    <section>
+        <div class="row" id="contenedorSection">
+            <div class="col-sm-4">
+              <div class="card">
+                <div class="card-body">
+                  <img src="images/059ef5ac23f89494f3954f6f706197dc-ilustracion-de-tiroteo-de-fogata.png" alt="icon">
+                  <a href="" class="btn btn-primary">EL REFUGIO</a>
+                  <p class="card-text">Un espacio para compartir en la sierra</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card">
+                <div class="card-body">
+                  <img src="images/—Pngtree—camping tent vector and icon_5067434.png" alt="icon">
+                  <a href="" class="btn btn-primary">RESERVAS</a>
+                  <p class="card-text">Reserva con nosotros tu lugar para camping</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card">
+                <div class="card-body">
+                  <img src="images/059ef5ac23f89494f3954f6f706197dc-ilustracion-de-tiroteo-de-fogata.png" alt="icon">
+                  <a href="" class="btn btn-primary">SERVICIOS</a>
+                  <p class="card-text">Ofrecemos servicios de comida para cuando volves de la sierra</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="refugio">
+            <p>Texto sobre nosotros >>></p>
+        </div>
+        <div class="reservas">
+          <legend>Complete sus datos para realizar la reserva >>> </legend>
+          <form id="formularioReservas">
+            <div>
+              <div class="mb-3">
+                <label for="exampleInputName" class="form-label">Nombre</label>
+                <input type="nombre" class="form-control" id="InputName" aria-describedby="name">
+              </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Mail</label>
+              <input type="email" class="form-control" id="InputMail" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputName" class="form-label">Telefono de Contacto</label>
+              <input type="nombre" class="form-control" id="InputContacto" aria-describedby="emailHelp">
+            </div>
+            <button id="enviar" type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+          </form>
+        </div>
+        <div id="servicios">
+          <div>
+            Reserva tu menu ahora >>>
+          </div>
+          <div class="card" id="cardServicios" style="width: 18rem;">
+              </div>
+          </div> 
     </section>
     <footer>
         <div>Contacto</div>
         <div>Ubicacion</div>
         <div>FAQS</div>
-    </footer>-->
+    </footer>
+    <script src="app.js"></script>
 </body>
 </html>
