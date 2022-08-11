@@ -28,9 +28,9 @@
             </ul>
             <h1 class="logo">REFUGIO</h1>
             <ul class="redes">
-                <li>wstp</li>
-                <li>instagram</li>
-                <li>mail</li>
+                <li><img class="img-redes" src="./images/facebook.png" alt="icon"></li>
+                <li><img class="img-redes" src="./images/instagram.png" alt="icon"></li>
+                <li><img class="img-redes" src="./images/whatsapp.png" alt="icon"></li>
             </ul>
         </nav>
     </header>
@@ -39,16 +39,16 @@
             <div class="col-sm-4">
               <div class="card">
                 <div class="card-body">
-                  <img src="images/059ef5ac23f89494f3954f6f706197dc-ilustracion-de-tiroteo-de-fogata.png" alt="icon">
+                  <img src="./images/059ef5ac23f89494f3954f6f706197dc-ilustracion-de-tiroteo-de-fogata.png" alt="icon">
                   <a href="" class="btn btn-primary">EL REFUGIO</a>
-                  <p class="card-text">Un espacio para compartir en la sierra</p>
+                  <p class="card-text">Un espacio para compartir con amigos en la sierra</p>
                 </div>
               </div>
             </div>
             <div class="col-sm-4">
               <div class="card">
                 <div class="card-body">
-                  <img src="images/—Pngtree—camping tent vector and icon_5067434.png" alt="icon">
+                  <img src="./images/—Pngtree—camping tent vector and icon_5067434.png" alt="icon">
                   <a href="" class="btn btn-primary">RESERVAS</a>
                   <p class="card-text">Reserva con nosotros tu lugar para camping</p>
                 </div>
@@ -57,9 +57,9 @@
             <div class="col-sm-4">
               <div class="card">
                 <div class="card-body">
-                  <img src="images/059ef5ac23f89494f3954f6f706197dc-ilustracion-de-tiroteo-de-fogata.png" alt="icon">
+                  <img src="./images/comer.png" alt="icon">
                   <a href="" class="btn btn-primary">SERVICIOS</a>
-                  <p class="card-text">Ofrecemos servicios de comida para cuando volves de la sierra</p>
+                  <p class="card-text">Conoce las ricas comidas que preparamos con amor</p>
                 </div>
               </div>
             </div>
@@ -69,8 +69,41 @@
         </div>
         <div class="reservas">
           <legend>Complete sus datos para realizar la reserva >>> </legend>
-          <form id="formularioReservas">
-            <div>
+          <div>
+          <form class="row" id="formularioReservas">
+            <div class="col-sm-4">
+              <div class="row mb-3" id="Check-In">
+                <label for="InputIn" class="form-label">Fecha de Check-In</label>
+                <div class="col-sm-4">
+                  <label for="InputPersonas" class="form-label">Dia</label>
+                  <input type="number" class="form-control" id="InputIndia" aria-describedby="checkin">
+                </div>
+                <div class="col-sm-4">
+                  <label for="InputPersonas" class="form-label">Mes</label>
+                  <input type="number" class="form-control" id="InputInmes" aria-describedby="checkin">
+                </div>
+                <div class="col-sm-4">
+                  <label for="InputPersonas" class="form-label">Año</label>
+                  <input type="number" class="form-control" id="InputInanio" aria-describedby="checkin">
+                </div>
+              </div>
+            <div class="row mb-3">
+              <label for="InputOut" class="form-label">Fecha de Check-Out</label>
+              <div class="col-sm-4">
+                <label for="InputPersonas" class="form-label">Dia</label>
+                <input type="number" class="form-control" id="InputOutdia" aria-describedby="checkin">
+              </div>
+              <div class="col-sm-4">
+                <label for="InputPersonas" class="form-label">Mes</label>
+                <input type="number" class="form-control" id="InputOutmes" aria-describedby="checkin">
+              </div>
+              <div class="col-sm-4">
+                <label for="InputPersonas" class="form-label">Año</label>
+                <input type="number" class="form-control" id="InputOutanio" aria-describedby="checkin">
+              </div>
+            </div>
+            </div>
+            <div class="col-sm-4">
               <div class="mb-3">
                 <label for="InputName" class="form-label">Nombre</label>
                 <input type="nombre" class="form-control" id="InputName" aria-describedby="name">
@@ -83,20 +116,51 @@
               <label for="InputNumber" class="form-label">Telefono de Contacto</label>
               <input type="numero" class="form-control" id="InputNumber" aria-describedby="number">
             </div>
-            <button id="enviar" type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+            <div class="col-sm-4">
+              <div class="mb-3">
+                <label for="InputPersonas" class="form-label">Cantidad de Carpas</label>
+                  <input type="number" class="form-control" id="InputCarpas" aria-describedby="checkin">
+              </div>
+              <div class="mb-3">
+                <label for="InputPersonas" class="form-label">Cantidad de Personas</label>
+                  <input type="number" class="form-control" id="InputPersonas" aria-describedby="checkin">
+              </div>
+              <button id="enviar" type="button" class="btn btn-primary">Enviar</button>
             </div>
           </form>
         </div>
-
+      </div>
         <div class="row" id="contenedorServicios">
           <div>
             Reserva tu menu ahora >>>
           </div>
-          
+        </div>
+        <div class="row" id="contenedorCarrito">
+          <div>
+            Tu reserva >>>
+          </div>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Menu</th>
+                <th scope="col">Detalle</th>
+                <th scope="col">Precio</th>
+              </tr>
+            </thead>
+            <tbody id="tBodyCarrito"class="table-group-divider">
+            </tbody>
+          </table>
         </div>
     </section>
     <footer>
+      <div>
         <div>Contacto</div>
+        <p>refugio@gmail.com</p>
+        <p>@elrefu</p>
+        <p>1157520298</p>
+      </div>
         <div>Ubicacion</div>
         <div>FAQS</div>
     </footer>
