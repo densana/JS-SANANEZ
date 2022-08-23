@@ -1,0 +1,69 @@
+.navbar-toggler {
+    border: none;
+}
+
+#titulo {
+    justify-content: center;
+    text-align: center;
+    margin-top:3%;
+    .card-title {
+        font-family: 'Lobster';
+        font-size: 50px;
+        padding:5%;
+    }
+}
+
+#contenedorSection {
+    padding: 5%;
+    .col {
+        justify-content: center;
+    }
+    .card {
+        background-color: transparent;
+        border: none;
+        justify-content: center;
+        text-align: center;
+        width: 70%;
+        margin: 10%;
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            align-items: center;
+
+        }
+        img {
+            width: 80px;
+            height: 80px;
+        }
+        .card-text {
+            font-size: 14px;
+        }
+        .btn {
+        background-color: transparent;
+        border: none;
+        font-weight: bolder;
+    }
+  }
+}
+
+
+
+#formLogIn, #formSignUp {
+    padding: 5%;
+    width: 40%;
+}
+
+#containerReservas {
+    div {
+        padding:5%;
+        justify-items: center;
+        justify-content: center;
+        h2 {
+            font-family:'Lobster';
+            font-size: 60px;
+            color: rgb(239, 194, 95);
+            text-align: center;
+        }
+    }
+}
