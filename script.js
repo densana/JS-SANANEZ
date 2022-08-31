@@ -60,15 +60,13 @@ const users = []
 
 })
 
-/*SIGN UP
+/*SIGN UP */
 
 if(localStorage.getItem('users')) { 
     signUp =  JSON.parse(localStorage.getItem('users')) 
 } else {
     localStorage.setItem('signUp', JSON.stringify('users')) 
-} */
-
-(localStorage.getItem('users')) ? signUp =  JSON.parse(localStorage.getItem('users')) : localStorage.setItem('signUp', JSON.stringify('users'))
+}
 
 formSignUp.addEventListener('submit', (e) => {
     e.preventDefault()
