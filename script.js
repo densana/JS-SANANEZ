@@ -103,7 +103,6 @@ if(localStorage.getItem('reservas')) { //String si existe / NULL si no existe
 }
 
 const form = document.getElementById("idForm")
-const botonReservas = document.getElementById("botonReservas")
 const divReservas = document.getElementById("divReservas")
 
 form.addEventListener('submit', (e) => {
@@ -119,6 +118,14 @@ form.addEventListener('submit', (e) => {
     form.reset()
 
     agregarReserva()
+
+    /*ALERTA DE RESERVA*/
+    Swal.fire({
+        icon: 'success',
+        title: 'Gracias!',
+        text: 'Su reserva ha sido generada con éxito',
+        footer: '<a href="#divReservas">Ver detalle en reservas</a>'
+      })
  
 })
 
@@ -152,3 +159,5 @@ const agregarReserva = () =>  {
         })
     })
 }
+
+

@@ -44,7 +44,7 @@
       <div id="titulo">
         <h5 class="card-title">El Refugio</h5>
       <p class="card-text">Vení a disfrutar la sierra con nosotros</p>
-      <button type="button" id="signUp" class="btn btn-primary">Sign Up</button>
+      <button <a href="#formLogIn" type="button" id="signUp" class="btn btn-primary">Sign Up</button>
       </div>
     </div>
   </div>
@@ -162,32 +162,16 @@
                 <option>Carpa para cinco personas</option>
               </select>
             </div>
-            <button type="submit" id="botonReservas" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal2">Reservar</button>
+            <button type="submit" class="btn btn-secondary" id="botonReservas">Reservar</button>
           </form>
         </div>
     </div>
       <div id="divReservas">
-        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel2">Gracias!</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                Su reserva fue generada con éxito
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary">Ver en Reservas</button>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
 
   </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.29/dist/sweetalert2.all.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
