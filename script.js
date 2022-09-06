@@ -160,4 +160,26 @@ const agregarReserva = () =>  {
     })
 }
 
+const API_KEY = "443da7fd777769b251b07c6919030b72"
+
+const divClima = document.getElementById('divClima')
+
+fetch(`https://api.openweathermap.org/data/2.5/weather?lat=-37.88867978530105&lon=-57.84369295980382&units=metric&appid=${API_KEY}`)
+    .then(response => response.json())
+    .then(({main}) => {
+        divClima.innerHTML = `
+        <div class="card border-primary mb-3" style="max-width: 20rem;">
+  <div class="card-header">Sierra de los Difuntos, Bs As, Arg</div>
+  <div class="card-body">
+    <h4 class="card-title">Clima</h4>
+    <p class="card-text">Temperatura ${main.temp} °C </p>
+    <p class="card-text">Sensaciòn Tèrmica ${main.feels_like} °C </p>
+    <p class="card-text">Humedad ${main.humidity} % </p>
+  </div>
+</div>`
+    
+    })
+
+
+
 

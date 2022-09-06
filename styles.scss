@@ -13,6 +13,10 @@
     }
 }
 
+#idForm {
+    justify-content: space-around;
+}
+
 #contenedorSection {
     padding: 5%;
     .col {
@@ -54,16 +58,3 @@
     width: 40%;
 }
 
-#containerReservas {
-    div {
-        padding:5%;
-        justify-items: center;
-        justify-content: center;
-        h2 {
-            font-family:'Lobster';
-            font-size: 60px;
-            color: rgb(239, 194, 95);
-            text-align: center;
-        }
-    }
-}
