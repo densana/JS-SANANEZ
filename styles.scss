@@ -13,8 +13,55 @@
     }
 }
 
-#idForm {
-    justify-content: space-around;
+#divClima {
+    justify-content: flex-end;
+    position:absolute;
+    margin-left: 77%;
+    margin-top:1%;
+}
+
+#formLogIn, #formSignUp {
+    margin:5%;
+    text-align: left;
+    .modal-footer {
+        text-align: left;
+    }   
+}
+
+#contenedorServicios {
+    display: flex;
+    justify-content: space-evenly;
+    margin:5%;
+}
+
+#contenedorReservas {
+    #carpa {
+        width: 100px;
+        height: 100px;
+    }
+    #tituloReservas {
+        font-family: 'Lobster';
+        font-size: 40px;
+        padding-top: 1%;
+    }
+    .card-body {
+padding: 2%;
+    }
+
+}
+
+#divReservas {
+    margin: 5%;
+    justify-content: center;
+    justify-items: center;
+    .botones {
+        margin: 1%;
+        align-content: flex-end;
+    }
+    .tituloReserva {
+        font-family: 'Lobster';
+        font-size: 40px;;
+    }
 }
 
 #contenedorSection {
@@ -51,10 +98,23 @@
   }
 }
 
-
-
-#formLogIn, #formSignUp {
-    padding: 5%;
-    width: 40%;
+#contenedorServicios {
+    #header {
+        margin-bottom: 2%;
+        #fogon {
+            width: 80px;
+            height: 80px;
+        }
+        #tituloServicios {
+            font-family: 'Lobster';
+            font-size: 40px;
+            padding-top: 1%;
+        }
+    }
 }
 
+#contenedorContacto {
+    padding-left: 4%;
+    padding-right: 4%;
+
+}

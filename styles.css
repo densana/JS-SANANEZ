@@ -13,6 +13,54 @@
   padding: 5%;
 }
 
+#divClima {
+  justify-content: flex-end;
+  position: absolute;
+  margin-left: 77%;
+  margin-top: 1%;
+}
+
+#formLogIn, #formSignUp {
+  margin: 5%;
+  text-align: left;
+}
+#formLogIn .modal-footer, #formSignUp .modal-footer {
+  text-align: left;
+}
+
+#contenedorServicios {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5%;
+}
+
+#contenedorReservas #carpa {
+  width: 100px;
+  height: 100px;
+}
+#contenedorReservas #tituloReservas {
+  font-family: "Lobster";
+  font-size: 40px;
+  padding-top: 1%;
+}
+#contenedorReservas .card-body {
+  padding: 2%;
+}
+
+#divReservas {
+  margin: 5%;
+  justify-content: center;
+  justify-items: center;
+}
+#divReservas .botones {
+  margin: 1%;
+  align-content: flex-end;
+}
+#divReservas .tituloReserva {
+  font-family: "Lobster";
+  font-size: 40px;
+}
+
 #contenedorSection {
   padding: 5%;
 }
@@ -46,19 +94,20 @@
   font-weight: bolder;
 }
 
-#formLogIn, #formSignUp {
-  padding: 5%;
-  width: 40%;
+#contenedorServicios #header {
+  margin-bottom: 2%;
+}
+#contenedorServicios #header #fogon {
+  width: 80px;
+  height: 80px;
+}
+#contenedorServicios #header #tituloServicios {
+  font-family: "Lobster";
+  font-size: 40px;
+  padding-top: 1%;
 }
 
-#containerReservas div {
-  padding: 5%;
-  justify-items: center;
-  justify-content: center;
-}
-#containerReservas div h2 {
-  font-family: "Lobster";
-  font-size: 60px;
-  color: rgb(239, 194, 95);
-  text-align: center;
+#contenedorContacto {
+  padding-left: 4%;
+  padding-right: 4%;
 }/*# sourceMappingURL=styles.css.map */

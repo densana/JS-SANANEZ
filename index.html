@@ -16,6 +16,8 @@
   <div class="card text-bg-dark">
     <img src="./img/campamento.svg" class="card-img" alt="...">
     <div class="card-img-overlay">
+      <div id="divClima">
+      </div>
       <nav class="navbar navbar-dark bg-transparent">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,6 +25,7 @@
           </button>
         </div>
       </nav>
+
       <div class="collapse" id="navbarToggleExternalContent">
         <div class="bg-transparent p-4">
           <ul class="navbar-nav">
@@ -44,13 +47,75 @@
       <div id="titulo">
         <h5 class="card-title">El Refugio</h5>
       <p class="card-text">Vení a disfrutar la sierra con nosotros</p>
-      <button <a href="#formLogIn" type="button" id="signUp" class="btn btn-primary">Sign Up</button>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Sign Up
+      </button>
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"><h3>Log In - Sign Up</h3></h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                  <form class="needs-validation col-sm-9" novalidate id="formLogIn">
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Mail Usuario</label>
+                      <input type="email" class="form-control"required name="mail" id="mailLogIn">
+                      <div class="valid-feedback">Campo Ok</div>
+                      <div class="invalid-feedback">Complete los datos</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" class="form-control"required name="password" id="passLogIn">
+                      <div class="valid-feedback">Campo Ok</div>
+                      <div class="invalid-feedback">Complete los datos</div>
+                    </div>
+                    <button type="submit" id="botonLogIn" class="btn btn-primary">Log In</button>
+                    <div class="mb-3 modal-footer">
+                      <button type="button" class="btn btn-link">Olvidaste tu contraseña?</button>
+                      <button type="button" class="btn btn-link" id="linkSignUp">No soy usuario</button>
+                    </div>
+                  </form> 
+            </div>
+            <form class="d-none needs-validation col-sm-9" novalidate id="formSignUp">
+              <div class="mb-3">
+                <label for="exampleusername" class="form-label">Nombre</label>
+                <input type="text" class="form-control" required name="username">
+                <div class="valid-feedback">Campo Ok</div>
+                <div class="invalid-feedback">Complete los datos</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail2" class="form-label">Mail Usuario</label>
+                <input type="email" class="form-control" required name="mail">
+                <div class="valid-feedback">Campo Ok</div>
+                <div class="invalid-feedback">Complete los datos</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputcontacto" class="form-label">Numero Contacto</label>
+                <input type="text" class="form-control" required name="number">
+                <div class="valid-feedback">Campo Ok</div>
+                <div class="invalid-feedback">Complete los datos</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword2" class="form-label">Password</label>
+                <input type="password" class="form-control" required name="password">
+                <div class="valid-feedback">Campo Ok</div>
+                <div class="invalid-feedback">Complete los datos</div>
+              </div>
+              <button type="submit" class="btn btn-primary" id="botonSignUp">Sign Up</button>
+              <button type="button" class="btn btn-link" id="linkLogIn">Ingresar con mi usuario</button>
+            </form> 
+          </div>
+          </div>
+        </div>
+      </div>
+
       </div>
     </div>
   </div>
 
   <section>
-
     <div class="row text-bg-transparent" id="contenedorSection">
       <div class="col-sm-4">
         <div class="card">
@@ -81,97 +146,168 @@
       </div>
     </div>
 
-    <div class="row bg-dark" id="contenedorLogIn">
-      <h2>Hola!</h2>
-        <form class="needs-validation" novalidate id="formLogIn">
-          <h3>Ingresa con tu usuario!</h3>
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Mail Usuario</label>
-            <input type="email" class="form-control"required name="mail" id="mailLogIn">
-            <div class="valid-feedback">Campo Ok</div>
-            <div class="invalid-feedback">Complete los datos</div>
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control"required name="password" id="passLogIn">
-            <div class="valid-feedback">Campo Ok</div>
-            <div class="invalid-feedback">Complete los datos</div>
-          </div>
-          <button type="submit" id="botonLogIn" class="btn btn-primary">Log In</button>
-          <div>
-            <button type="button" class="btn btn-link">Olvidaste tu contraseña?</button>
-            <button type="button" class="btn btn-link" id="linkSignUp">No soy usuario</button>
-          </div>
-        </form> 
-        <form class="col-sm-6 d-none needs-validation" novalidate id="formSignUp">
-          <h3>Crea un usuario</h3>
-          <div class="mb-3">
-            <label for="exampleusername" class="form-label">Nombre</label>
-            <input type="text" class="form-control" required name="username">
-            <div class="valid-feedback">Campo Ok</div>
-            <div class="invalid-feedback">Complete los datos</div>
-          </div>
-          <div class="mb-3">
+    <div class="card border-dark mb-3"  id="contenedorReservas" style="max-width: 100%;">
+      <div class="card-header row">
+        <div class="col-sm-1">
+          <img id="carpa" src="img/—Pngtree—camping tent vector and icon_5067434.png" alt="icon">
+        </div>        
+        <div class="col-sm-11 text-muted" id="tituloReservas">Reserva con nosotros</div>
+      </div>
+      <form class="needs-validation" novalidate id="idForm">
+      <div class="card-body row">
+        <div class="col-sm-4">
+          <h4 class="card-title">Detalle Reserva</h4>
+          <div class="col-sm-9 mb-3 mt-3">
+            <label for="inputCheckIn" class="form-label">Check In</label>
+            <input type="date" class="form-control" id="idCheckIn" required name="checkIn">
+        </div>
+        <div class="col-sm-9 mb-3">
+          <label for="inputCheckOut" class="form-label">Check Out</label>
+          <input type="date" class="form-control" id="idCheckOut" required name="checkOut">
+      </div>
+        <div class="col-sm-9 mb-3 form-group">
+          <label for="InputPersonas" class="form-label">Carpa</label>
+          <select class="form-select" id="idCarpas" required name="carpa">
+            <option selected disabled value>Seleccionar...</option>
+            <option>Carpa para una persona</option>
+            <option>Carpa para dos personas</option>
+            <option>Carpa para tres personas</option>
+            <option>Carpa para cuatro personas</option>
+            <option>Carpa para cinco personas</option>
+          </select>
+        </div>
+        </div>
+        <div class="col-sm-4 ">
+        <h4 class="card-title">Desea agregar algún servicio?</h4>
+          <fieldset class="form-group">
+            <div class="form-check mb-3 mt-3">
+              <input class="form-check-input" type="checkbox" name="trekk" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Dìa de Trekking en la Sierra
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" required name="climb" id="flexCheckChecked" checked="">
+              <label class="form-check-label" for="flexCheckChecked">
+                Dìa de Escalada en la Sierra
+              </label>
+            </div>
+          </fieldset>
+        </div>
+        <div class="col-sm-4">
+        <h4 class="card-title">Datos de la Reserva</h4>
+          <div class="col-sm-9 mb-3 mt-3">
             <label for="exampleInputEmail2" class="form-label">Mail Usuario</label>
             <input type="email" class="form-control" required name="mail">
             <div class="valid-feedback">Campo Ok</div>
             <div class="invalid-feedback">Complete los datos</div>
           </div>
-          <div class="mb-3">
-            <label for="exampleInputcontacto" class="form-label">Numero Contacto</label>
+          <div class="col-sm-9 mb-3">
+            <label for="exampleInputcontacto" class="form-label">Número Contacto</label>
             <input type="text" class="form-control" required name="number">
             <div class="valid-feedback">Campo Ok</div>
             <div class="invalid-feedback">Complete los datos</div>
           </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword2" class="form-label">Password</label>
-            <input type="password" class="form-control" required name="password">
-            <div class="valid-feedback">Campo Ok</div>
-            <div class="invalid-feedback">Complete los datos</div>
+          <button type="submit" class="btn btn-primary mt-3" id="botonReservas">Reservar</button>
           </div>
-          <button type="submit" class="btn btn-primary" id="botonSignUp">Sign Up</button>
-          <button type="button" class="btn btn-link" id="linkLogIn">Ingresar con mi usuario</button>
-        </form> 
+          <div>
+            
+            </div>
       </div>
-    
-      <div class="row bg-transparent" id="containerReservas">
-        <div class="col-sm-6">
-          <h2>Reserva para camping:</h2>
-          <div id="divClima">
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <form class="needs-validation" novalidate id="idForm">
-            <div>
-              <label for="inputMailReserva" class="form-label">Email Reserva</label>
-              <input type="email" class="form-control" id="idMailReserva" name="mail">
-            </div>
-            <div>
-                <label for="inputCheckIn" class="form-label">Check In</label>
-                <input type="date" class="form-control" id="idCheckIn" name="checkIn">
-            </div>
-            <div>
-              <label for="inputCheckOut" class="form-label">Check Out</label>
-              <input type="date" class="form-control" id="idCheckOut" name="checkOut">
-          </div>
-            <div class="form-group>
-              <label for="InputPersonas" class="form-label">Carpa</label>
-              <select class="form-select" id="idCarpas" name="carpa">
-                <option selected disabled value>Seleccionar...</option>
-                <option>Carpa para una persona</option>
-                <option>Carpa para dos personas</option>
-                <option>Carpa para tres personas</option>
-                <option>Carpa para cuatro personas</option>
-                <option>Carpa para cinco personas</option>
-              </select>
-            </div>
-            <button type="submit" class="btn btn-secondary" id="botonReservas">Reservar</button>
-          </form>
-        </div>
-    </div>
+    </form>
+  </div>
+
+
+   
       <div id="divReservas">
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel2">Gracias!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Su reserva fue generada con éxito
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary">Ver en Reservas</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
+      <div class="row" id="contenedorServicios">
+        <div class="row" id="header">
+          <div class="col-sm-1">
+            <img id="fogon" src="./img/059ef5ac23f89494f3954f6f706197dc-ilustracion-de-tiroteo-de-fogata.png" alt="icon">
+          </div>        
+          <div class="col-sm-11 text-muted" id="tituloServicios">Servicios y Tarifas</div>
+        </div>
+        <div class="card text-white bg-primary col-sm-4 mb-3" style="max-width: 20rem;">
+          <div class="card-body">
+            <h5 class="card-title">Día de camping</h5>
+          </div>
+          <img id="trekking" src="img/c53a44d3af7099b6bb7e7bd5bb472e41.jpg" alt="icon">
+          <div class="card-body">
+            <p class="card-text">Incluye derecho de acampe y uso de las áreas en común del refugio</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">check-in: 8am</li>
+            <li class="list-group-item">check-out: 8pm</li>
+            <li class="list-group-item">$1000 por persona</li>
+          </ul>
+        </div>
+        <div class="card text-white bg-primary col-sm-4 mb-3" style="max-width: 20rem;">
+          <div class="card-body">
+            <h5 class="card-title">Día de Trekking</h5>
+          </div>
+          <img id="trekking" src="img/4eb15f9742e0d3ddf9a347a1071fdefd.jpg" alt="icon">
+          <div class="card-body">
+            <p class="card-text">Paseo por la sierra de baja dificultad.</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Salida: 9am</li>
+            <li class="list-group-item">Regreso: 13pm</li>
+            <li class="list-group-item">$1500 por persona</li>
+          </ul>
+        </div>
+  <div class="card text-white bg-primary col-sm-4 mb-3" style="max-width: 20rem;">
+    <div class="card-body">
+      <h5 class="card-title">Día de Escalada</h5>
+    </div>
+    <img id="trekking" src="img/1e90dede461a856a1a5aaf6d21170dcf.jpg" alt="icon">
+    <div class="card-body">
+      <p class="card-text">Te llevamos a conocer distintos sectores de escalada, con vías para todos los niveles</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Salida: 9am</li>
+      <li class="list-group-item">Regreso: 15pm</li>
+      <li class="list-group-item">$2500 por persona</li>
+    </ul>
+  </div>
+      </div>
+      <div class="card row text-white bg-dark mb-3"  id="contenedorContacto" style="max-width: 100%;">
+
+        <div class="card-header">El Refugio</div>
+         <div class="row card-body">
+          <div class="col-sm-4">
+            <p class="card-text">Si querés estar en contacto con la naturaleza, el refugio es el lugar ideal, un espacio tranquilo para compartir con amigos en la sierra.</p>
+            </div>
+            <div class="col-sm-4" >
+              <p>Wstp: 1157463872</p>
+              <p>Mail: elrefugio@gmail.com</p>
+              <p>Facebook: El Refugio de Difu</p>
+              <p>Instagram: @elrefu</p>
+              <p>Ubicación: Barrio Colinas Verdes, Bs As</p>
+            </div>
+            <div class="col-sm-4">
+            <p class="card-text">Politica de cancelación: la cancelación no tiene cargos. Si pedímos avisar 24 hs antes de la fecha de la reserva.</p>
+            </div>
+          </div>
+        </div>
   </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.29/dist/sweetalert2.all.min.js"></script>
